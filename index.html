@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오뚜기</title>
+    <link rel="shortcut icon" href="icons/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0;padding: 0;list-style: none;font-family: 'Noto Sans KR', sans-serif;}
+        header{width: 100%;height: 190px;background-color: #fef100;}
+        #header1{width: 1200px;height: 115px;margin: auto;position: relative;}
+        #header1>ul{position: absolute;top: 40px;right: 20px;}
+        #header1>ul>li{float: left;margin-right: 5px;}
+        #header1>ul>li:hover{cursor: pointer;}
+        #header2{width: 1200px;height: 70px;margin: auto;}
+        #logo{text-align: center;padding-top: 10px;width: 101px;height: 98px;margin: auto;}
+        #logo:hover{cursor: pointer;}
+        #menu>li{float: left;width: 200px;height: 70px;line-height: 70px;text-align: center;font-weight: 400;background: url(icons/bul_vline1.png) 2px center no-repeat;}
+        #menu>li:nth-child(1){background: none}
+        #menu>li:hover{border-bottom: 4px solid #dc2d34;color: #dc2d34;transition: 0.1s;cursor: pointer;}
+        #slide{width: 100%;height: 530px;background: url(images/img_visual46.jpg) center no-repeat;margin: auto;position: relative;}
+        #slide_left_btn{position: absolute;top: 0;bottom: 0;left: 70px;margin: auto;}
+        #slide_right_btn{position: absolute;top: 0;bottom: 0;right: 70px;margin: auto;}
+        #slide>img:hover{cursor: pointer;}
+        #slide:hover{cursor: pointer;}
+        #slide_bt{position: absolute;left: 70px;bottom: 50px;}
+        #slide_bt>li{background-color: rgb(255, 255, 255);border-radius: 100%;width: 11px;height: 11px;float: left;margin-right: 10px;}
+        #slide_bt2{position: absolute;left: 240px;bottom: 45px;}
+        #slide_bt2>li{float: left;margin-left: 10px;}
+
+        #banner{width: 1200px;margin: auto;margin-top: 50px;height: 288px;}
+        #banner>li{width: 288px;margin-right: 16px;float: left;height: 288px;background-color: rgb(77, 77, 77);position: relative;}
+        #banner>li:nth-child(1){background: url(images/bgM7.jpg) center no-repeat;}
+        #banner>li:nth-child(2){background: url(images/bgM3.jpg) center no-repeat;}
+        #banner>li:nth-child(3){background: url(images/bgM1.jpg) center no-repeat;}
+        #banner>li:nth-child(4){background: url(images/bgM5.jpg) center no-repeat;margin-right: 0;}
+        #banner>li>h3{margin: auto;margin-top: 100px;text-align: center;font-size: 35px;color: #fff;}
+        #banner>li>h4{color: #fff;margin-top: 150px;margin: auto;text-align: center;font-size: 25px;}
+        #banner>li>p{color: rgb(255, 255, 255);margin: auto;margin-top: 5px;text-align: center;}
+
+        #news{width: 1200px;margin: auto;margin-top: 50px;height: 240px;}
+        #news>li{width: 288px;height: 240px;margin-right: 16px;float: left;}
+        #news>li:nth-child(4){margin-right: 0;}
+        #news>li>h3{font-size: 30px;}
+        #news>li>p{color: red;margin: auto;margin-top: 10px;margin-left: 95px;}
+        #news>li>h4{font-size: 18px;}
+        #news>li>h5{font-size: 14px;margin-top: 25px;font-weight: 300;}
+        
+        #event_new{width: 1200px;height: 400px;margin: auto;margin-top: 100px;}
+        #event{width: 600px;height: 400px;float: left;}
+        #event>h3{font-size: 30px;line-height: 70px;font-weight: 390;}
+        #event_box{width: 600px;height: 300px;background: url(images/2022-05-06_543866411.jpg);}
+        #event>ul>li{float: left;margin: auto;text-align: center;margin-right: 10px;margin-top: 6px;}
+        #event>ul{width: 170px;height: 28px;background-color: #ccc;border-radius: 28px;margin: auto;margin-top: 5px;}
+        #event>ul>li:nth-child(1){height: 13px;width: 13px;border-radius: 100%; background-color: yellow;margin-left: 25px;}
+        #event>ul>li:nth-child(2){height: 13px;width: 13px;border-radius: 100%;background-color: #fff;}
+        #event>ul>li:nth-child(3){height: 13px;width: 13px;border-radius: 100%;background-color: #fff;}
+        #event>ul>li:nth-child(4){background: url(icons/btn_play.png) center no-repeat;width: 11px;height: 13px;}
+        #event>ul>li:nth-child(5){background: url(icons/btn_stop.png) center no-repeat;width: 11px;height: 13px;}
+        #new{width: 600px;height: 400px;float: right;}
+        #new>h3{line-height: 70px;font-size: 30px;font-weight: 390;}
+        #new_box1{width: 300px;height: 300px;;float: left;}
+        #new_box1_img{width: 300px;height: 300px;}
+        #new_box1_img>img{width: 300px;height: 300px;}
+        #new_box1>ul{width: 170px;height: 28px;border-radius: 28px;background-color: #ccc;margin: auto;margin-top: 5px;}
+        #new_box1>ul>li{float: left;margin: auto;text-align: center;margin-right: 10px;margin-top: 6px;}
+        #new_box1>ul>li:nth-child(1){height: 13px;width: 13px;border-radius: 100%; background-color: yellow;margin-left: 25px;}
+        #new_box1>ul>li:nth-child(2){height: 13px;width: 13px;border-radius: 100%;background-color: #fff;}
+        #new_box1>ul>li:nth-child(3){height: 13px;width: 13px;border-radius: 100%;background-color: #fff;}
+        #new_box1>ul>li:nth-child(4){background: url(icons/btn_play.png) center no-repeat;width: 11px;height: 13px;}
+        #new_box1>ul>li:nth-child(5){background: url(icons/btn_stop.png) center no-repeat;width: 11px;height: 13px;}
+        #new_box2{width: 300px;height: 300px;float: left;text-align: center;border: 1px solid rgb(188, 188, 188);box-sizing: border-box;}
+        #new_box2>h4{font-size: 20px;margin-top: 15px;}
+        #new_box2_img{width: 180px;height: 218px;background: url(images/2022-05-31_738999338[2].jpg) center no-repeat;margin: auto;}
+        #best{width: 100%;height: 600px;background: url(images/visual_06.jpg);margin-top: 30px;overflow: hidden;}
+        #best_box{width: 1200px;height: 560px;margin: auto;margin-top: 20px;text-align: center;color: #fff;}
+        #best_box>h3{font-size: 32px;line-height: 50px;}
+        #best_box>hr{width: 60px;height: 1px;border: none;border-top: 1px solid rgb(255, 255, 255);margin: auto;}
+        #best_box>h4{margin-top: 5px;}
+        #best_box>ul{margin-top: 30px;}
+        #best_box>ul>li{width: 220px;height: 322px;background-color: #fff;margin: 10px;float: left;border: 1px solid rgb(0, 0, 0);box-sizing: border-box;border-radius: 2px;position: relative;overflow: hidden;}
+        #best_box>ul>li>img{width: 167px;height: 199px;margin: auto;border-bottom: 1px solid #ccc;}
+        #best_box>ul>li>h4{color: rgb(73, 73, 73);font-size: 22px;font-weight: 390;margin-top: 10px;}
+        #best_box>ul>li>h5{color: #000;font-weight: 390;margin-top: 15px;}
+
+        #best_box>ul>li>div{width: 218px;height: 320px;background-color: rgba(255, 0, 0, 0.438);overflow: hidden; left: 0;  top:320px;position: absolute; transition: 0.4s;}
+        #best_box>ul>li>div>div{width: 158px;height: 270px;border: 1px solid rgb(254, 254, 254);margin: auto;margin-top: 25px;}
+        #best_box>ul>li>div>div>img{margin-top: 101px;opacity: 1.0;}
+        #best_box>ul>li:hover>div{position: absolute;top: 0;}
+
+
+        #okitchen{width: 100%;height: 700px;background-color: #fffee5;overflow: hidden;}
+        #okitchen_box{width: 1180px;height: 450px;margin: auto;margin-top: 50px;overflow: hidden;text-align: center;border-bottom: 3px solid rgb(221, 221, 221);}
+        #okitchen_box>h3{font-size: 40px;color: rgb(60, 60, 60);}
+        #okitchen_box>hr{width: 50px;margin: auto;border: none;border-bottom: 1px solid red;margin-top: 10px;margin-bottom: 10px;}
+        #okitchen_box>h4{color: rgb(143, 143, 143);}
+        #okitchen_box>ul{margin-top: 50px; width: 1626px;}
+
+        #okitchen_box>ul>li{width: 246px;height: 260px;float: left;margin-right: 30px;}
+        #okitchen_box>ul>li>img{width: 244px;height: 171px;}
+
+        #okitchen_box>ul>li>h5{font-size: 14px;margin-top: 25px;text-align-last: left;color: rgb(120, 120, 120);}
+        #okitchen_box>ul>li>h4{font-size: 20px;margin-top: 5px;text-align: left;color: rgb(38, 38, 38);}
+        #okitchen_box>ul>li:nth-child(6){margin-right: 0;}
+        #sns{text-align: center;margin-top: 40px;width: 1200px;height: 700px;margin: auto;}
+        #sns>h3{font-size: 40px;color: rgb(60, 60, 60);}
+        #sns>hr{width: 50px;margin: auto;border: none;border-bottom: 1px solid red;margin-top: 10px;margin-bottom: 10px;}
+        #sns>h4{color: rgb(143, 143, 143);}
+        #sns_menu{width: 1200px;height: 50px;background-color: #ebeff2;margin: auto;margin-top: 10px;}
+        #sns_menu>li{width: 300px;height: 50px;float: left;text-align: center;line-height: 50px;color: rgb(116, 116, 116);}
+        #sns_menu>li:nth-child(1){color: #fff;background-color: #223a6a;font-weight: 900;}
+        #sns_menu>li:hover{color: #fff;background-color: #223a6a;font-weight: 900;transition: 0.3s;}
+
+        #sns_list{width: 1200px;height: 360px;margin: auto;}
+        #sns_list>li{width: 290px;height: 350px;margin: 5px;float: left;margin-top: 30px;}
+        #sns_list>li>img{height: 288px;width: 288px;margin: auto;}
+        #sns_list>li>h5{color: rgb(97, 97, 97);text-align: left;}
+        #footer1{width: 100%;height: 65px;background-color: #f7f7f7;border-top: 1px solid rgb(188, 188, 188);border-bottom: 1px solid rgb(190, 190, 190);}
+        #footer1_box{width: 1230px;height: 65px;margin: auto;position: relative;}
+        #footer1_box>ul{}
+        #footer1_box>ul>li{float: left;margin-left: 30px;line-height: 65px;}
+        #footer_icon{position: absolute;top: 12px;bottom: 0;right: 0;margin: auto;}
+        #footer_icon>ul{}
+        #footer_icon>ul>li{width: 35px;height: 35px;float: left;margin-left: 10px;}
+        #footer_icon>ul>li:nth-child(1){background: url(icons/insta_icon.png) center no-repeat;}
+        #footer_icon>ul>li:nth-child(2){background: url(icons/blog_icon.png) center no-repeat;}
+        #footer_icon>ul>li:nth-child(3){background: url(icons/btn_ff.png) center no-repeat;}
+        #footer_icon>ul>li:nth-child(4){background: url(icons/btn_yt.png) center no-repeat;}
+        #footer2{width: 100%;height: 135px;}
+        #footer2_box{width: 1200px;height: 135px;margin: auto;position: relative;}
+        #footer2_box>img{margin-top: 20px;}
+        #footer_txt{width: 620px;height: 75px;position: absolute;top: 20px;left: 180px;margin: auto;}
+        #footer_txt>ul{width: 620px;height: 75px;}
+        #footer_txt>ul>li{float: left;font-size: 12px;margin-left: 15px;margin-bottom: 5px;}
+        #id{height: 15px;width: 1px;background-color: rgb(192, 192, 192);}
+        #chi{position: absolute;top: 10px;right: 0;width: 300px;height: 59px;}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div id="header1">
+            <h1 id="logo"><img src="icons/logo.png" alt=""></h1>
+            <ul>
+                <li><img src="icons/icon_lang.png" alt=""></li>
+                <li><img src="icons/top_chat.png" alt=""></li>
+            </ul>
+        </div>
+
+        <div id="header2">
+            <ul id="menu">
+                <li>회사소개</li>
+                <li>ESG경영</li>
+                <li>제품정보</li>
+                <li>O'Kitchen</li>
+                <li>홍보센터</li>
+                <li>고객서비스</li>                
+            </ul>
+        </div>
+      
+    </header>
+    
+    <div id="slide">
+        <img src="icons/bx-prev2.png" alt="" id="slide_left_btn">
+        <img src="icons/bx-next2.png" alt="" id="slide_right_btn">
+        <div id="slide_bt_box">
+
+            <ul id="slide_bt">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul id="slide_bt2">
+                <li><img src="icons/btn_play.png" alt=""></li>
+                <li><img src="icons/btn_stop.png" alt=""></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <ul id="banner">
+        <li>
+            <h3>지속가능</h3>
+            <h4>ESG경영</h4>
+            <p>more></p>
+        </li>
+        <li>
+            <h3>미래가치</h3>
+            <h4>투자정보</h4>
+            <p>more></p>
+        </li>
+        <li>
+            <h3>나눔미학</h3>
+            <h4>사회공헌</h4>
+            <p>more></p>
+        </li>
+        <li>
+            <h3>오뚜기몰</h3>
+            <h4>바로가기</h4>
+            <p>more></p>
+        </li>
+    </ul>
+
+
+
+    <ul id="news">
+        <li>
+            <h3>오뚜기 뉴스</h3>
+            <p>more></p>
+        </li>
+        <li>
+            <h4> 스위트홈 제25회 오뚜기 가족요리 페스티발 개최</h4>
+            <h5>우리 회사는 21일(토) 수원 광교 앨리웨이<br>
+                 ‘헬로그라운드’에서 ‘스위트홈 제25회 오뚜<br>
+                 기 가족요리 페스티발’을 개최했습니다.올해<br>
+                 로 25회째를 맞는 스위트홈 오뚜기 가족요<br>
+                 리 페스티발은 요리를 통해 가족 간의 화목<br>
+                 과 밝은 사회를 구현하자는 취...
+                2022.05.21</h5>
+        </li>
+        <li>
+            <h4>오뚜기 제2회 푸드 에세이 공모전 <br>시상식 개최</h4>
+            <h5>우리 회사는 5월 18일 오뚜기센터 풍림홀<br>
+                에서 ‘오뚜기 제2회 푸드 에세이 공모전’ 시<br>
+                상식을 개최 하였습니다. 지난 해에 이어 <br>
+                올해 2회 째 개최된 이번 공모전은 다양한<br>
+                 음식에 얽힌 따뜻한 이야기를 발굴해 가족<br>
+                  사랑 ‘스위트 홈’...
+                2022.05.18</h5>
+        </li>
+        <li>
+            <h4>오뚜기,‘화덕style피자’2종 출시</h4>
+            <h5>지난 5월 16일 오뚜기가 성수동 마리오네<br>
+                에서 냉동피자 시장의 새바람을 몰고 올<br>
+                 ‘화덕style피자’ 출시 기념 행사를 개최했<br>
+                 습니다. 매콤한 핫소스와 페페로니를 가득<br>
+                  올린 `페페로니디아볼라 피자`, 그리고 양<br>
+                  송이, 새송이버섯, 트러플 풍미...
+                2022.05.16</h5>
+        </li>
+    </ul>
+
+
+    <div id="event_new">
+
+        <div id="event">
+            <h3>이벤트</h3>
+            <div id="event_box"></div>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+        <div id="new">
+            <h3>신제품 소개</h3>
+            <div id="new_box1">
+                <div id="new_box1_img">
+                    <img src="images/2022-05-13_752995320.jpg" alt="">
+                </div>
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+
+            <div id="new_box2">
+                <div id="new_box2_img">
+
+                </div>
+               <h4>화덕style 페페로니 디아볼라</h4>
+             <h5>냉장/냉동식품 > 냉동피자</h5>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+    <div id="best">
+
+        <div id="best_box">
+            <h3>오뚜기 인기상품</h3>
+            <hr>
+            <h4>오뚜기의 인기상품들을 소개합니다.</h4>
+            <ul>
+                <li>
+                    <img src="images/2021-04-20_671244888[6].jpg" alt="">
+                    <h4>프레스코 미트 스파게티소스</h4>
+                    <h5>조미소스/식품스파게티소스</h5>
+                    <div id="let_see">
+
+                        <div>
+                            
+                         <img src="icons/btn_view.png" alt="">                                
+
+                            
+
+
+
+                        </div> </div>
+                </li>
+                <li>
+                    <img src="images/2022-03-17_367582465[2].jpg" alt="">
+                    <h4>시그니처익스트림_콘크러스트_피자 530G</h4>
+                    <h5>냉장/냉동식품냉동피자</h5>
+                    <div id="let_see">
+
+                        <div>
+
+                            
+                         <img src="icons/btn_view.png" alt="">
+                                
+
+                            
+
+
+
+                        </div> </div>
+                </li>
+                <li>
+                    <img src="images/2021-06-24_391242475.jpg" alt="">
+                    <h4>오즈키친 게살크래미주먹밥</h4>
+                    <h5>냉장/냉동식품냉동밥</h5>
+                    <div id="let_see">
+
+                        <div>
+
+                            
+                         <img src="icons/btn_view.png" alt="">
+                                
+
+                            
+
+
+
+                        </div> </div>
+                </li>
+                <li>
+                    <img src="images/2020-03-18_82503302[4].jpg" alt="">
+                    <h4>뚜기네 분식집 라볶이</h4>
+                    <h5>곡류가공식품 > 쌀떡류</h5>
+                    <div id="let_see">
+
+                        <div>
+
+                            
+                         <img src="icons/btn_view.png" alt="">
+                                
+
+                            
+
+
+
+                        </div> </div>
+                </li>
+                <li>
+                    <img src="images/2022-02-03_327063180.jpg" alt="">
+                    <h4>오늘밥상 제육볶음양념</h4>
+                    <h5>카테고리없음 > 카테고리없음</h5>
+                    <div id="let_see">
+
+                        <div>
+
+                            
+                         <img src="icons/btn_view.png" alt="">
+                                
+
+                            
+
+
+
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+        </div>  
+
+
+    </div>
+
+
+    <div id="okitchen">
+
+        <div id="okitchen_box">
+            <h3>O'Kitchen</h3>
+            <hr>
+            <h4>오뚜기가 제안하는 맛있고 건강한 요리</h4>
+            <ul>
+                <li>
+                    <img src="images/2022-02-21_397338068[18].jpg" alt="">
+                    <h5>#한라봉소르베 #홈디저트 #파티메뉴</h5>
+                    <h4>한라봉소르베</h4>
+                </li>
+                <li>
+                    <img src="images/2021-06-26_856606119[22].jpg" alt="">
+                    <h5>#카레 #카레퐁듀 #오뚜기카레</h5>
+                    <h4>쿠시아게 카레퐁듀</h4>
+                </li>
+                <li>
+                    <img src="images/2022-02-21_397338068[26].jpg" alt="">
+                    <h5>#만두 #야식</h5>
+                    <h4>비빔만두</h4>
+                </li>
+                <li>
+                    <img src="images/2021-09-03_177186357[28].jpg" alt="">
+                    <h5>#토마토 #솥밥 #카레</h5>
+                    <h4>카레 토마토솥밥</h4>
+                </li>
+                <li>
+                    <img src="images/2022-02-21_397338068[10].jpg" alt="">
+                    <h5>#허니머스타드 #올리고당 #마요네스</h5>
+                    <h4>데리야끼치킨 뚱샌드위치</h4>
+                </li>
+                <li>
+                    <img src="" alt="">
+                    <h5></h5>
+                    <h4></h4>
+                </li>
+            </ul>
+
+        </div>
+
+
+
+    </div>
+
+    <div id="sns">
+        <h3>오뚜기 SNS</h3>
+        <hr>
+        <h4>소셜미디어를 통해 보는 오뚜기 스토리를 소개합니다.</h4>
+        <ul id="sns_menu">
+            <li>오뚜기 데일리</li>
+            <li>오늘 맛으로 행복한 세상</li>
+            <li>타바스코 코리아</li>
+        </ul>
+        <ul id="sns_list">
+            <li>
+                <img src="images/2022-06-03_92820011.jpg" alt="">
+                <h5>뜨-끈한 국물이 생각나는 날,, 아직도 육수 끓이기부터 시작하시나요? 즉석국 6종...</h5>
+            </li>
+            <li>
+                <img src="images/2022-06-03_92820011[1].jpg" alt="">
+                <h5>스프라면 취향 대결 오뚜기 대표 스프와 라면의 맛남! SNS를 뜨겁게 달군 스프라면!</h5>
+            </li>
+            <li>
+                <img src="images/2022-06-03_92820011[2].jpg" alt="">
+                <h5>로제 덕후 모두 모여랏! 컵누들 매콤찜닭맛으로 꾸덕~한 로제찜닭 뚝딱! 만들어...</h5>
+            </li>
+            <li>
+                <img src="images/2022-06-03_92820011[3].jpg" alt="">
+                <h5>화덕 없이 집에서도 간편하게! 불향 가득한 화덕style 피자 등장 직화 오븐에...</h5>
+            </li>
+        </ul>
+
+
+    </div>
+
+
+    <footer>
+
+        <div id="footer1">
+
+            <div id="footer1_box">
+                <ul>
+                    <li>개인정보처리방침</li>
+                    <li>고객상담</li>
+                    <li>찾아오시는 길</li>
+                    <li>오뚜기몰</li>
+                    <li>고객상담 챗봇</li>
+                </ul>
+                <div id="footer_icon">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer2">
+
+            <div id="footer2_box">
+
+                <img src="icons/f_logo.jpg" alt="" id="footerlogo">
+
+
+
+
+                <div id="footer_txt">
+                    <ul>
+                        <li>(주)오뚜기</li>
+                        <li id="id"></li>
+                        <li>사업자등록번호 : 138-81-03238</li>
+                        <li id="id"></li>
+                        <li>대표이사 황성만</li>
+                        <li id="id"></li>
+                        <li>주소 (14060) 경기도 안양시 동안구 흥안대로 405 (평촌동 160)</li>
+                        <li id="id"></li>
+                        <li>오뚜기 고객상담실 : 080-024-2311</li>
+                        <li id="id"></li>
+                        <li>오뚜기라면 고객상담실 : 080-088-1212 (월~금 08:30~17:00)</li>
+                    </ul>
+
+                </div>
+
+
+
+
+
+
+
+
+                <img src="icons/2014_WA_mark2.gif" alt="" id="chi">
+
+            </div>
+
+           
+
+        </div>
+
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
